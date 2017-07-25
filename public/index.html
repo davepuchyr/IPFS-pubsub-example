@@ -1,13 +1,78 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        <h1>IPFS pubsub experiment</h1>
 
-        <input id="postTxt" type="text" placeholder="message" />
-        <input id="postButton" type="button" value="submit" />
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Zilla Slab', serif;
+        }
+        
+        .header-bar {
+            height: 2em;
+            width: 100%;
+            background-color: #000;
+            font-size: 16px;
+            color: #fff;
+        }
+        
+        .header-bar b {
+            padding: 16px;
+            padding-top: 16px;
+        }
+        
+        #header {
+            height: 13vw;
+            width: 100%;
+            background-color: #C4C8B7;
+            background-size: 72%;
+            background-position: center center;
+        }
+        
+        .container {
+            margin: 16px;
+        }
+    </style>
+</head>
 
-        <div id="message"></div>
+<body>
+    <div class="header-bar">
+        <b>IPFS pubsub imageboard experiment</b>
+        <img src="img/shroom.png" style="position: absolute; right: 4px;">
+    </div>
 
-        <script src="js/app.js"></script>
-    </body>
+    <div class="container" style="margin:0;">
+        <div id="header" style="">
+
+        </div>
+
+        <div style="padding:16px; background-color:#E4E4E4;">
+            <form id="postForm">
+                <input id="postSub" type="text" placeholder="subject">
+                <br><textarea id="postTxt" rows="4" cols="36" placeholder="message" required></textarea>
+                <br><input id="postFile" type="file">
+                <input type="submit" value="submit" />
+            </form>
+        </div>
+
+        <div id="message" style="padding:16px;">
+
+        </div>
+
+        <hr>
+        <center>
+            <a href="http://www.cachep2p.com/">CacheP2P</a>
+            <a href="http://ipfs.io/">IPFS</a>
+            <a href="http://github/">GitHub</a>
+            <a href="https://robohash.org/">robohash</a>
+        </center>
+    </div>
+
+    <script src="js/app.js"></script>
+    <!-- <script src="js/cachep2p.min.js"></script>
+    <script src="js/cachep2p.security.js"></script>
+    <script src="js/init.js"></script> -->
+</body>
+
 </html>
